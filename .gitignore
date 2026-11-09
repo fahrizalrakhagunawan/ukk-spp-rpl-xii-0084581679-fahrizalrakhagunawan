@@ -1,0 +1,40 @@
+# ========================================================================
+# .gitignore Terpadu: Monorepo C# Desktop & PHP Laravel
+# ========================================================================
+
+# --- LARAVEL & PHP ---
+web-laravel/vendor/
+web-laravel/node_modules/
+web-laravel/.env
+web-laravel/public/storage
+web-laravel/public/hot
+web-laravel/storage/*.key
+web-laravel/storage/framework/cache/*
+web-laravel/storage/framework/sessions/*
+web-laravel/storage/framework/views/*
+web-laravel/storage/logs/*
+web-laravel/.phpunit.result.cache
+web-laravel/Homestead.json
+web-laravel/Homestead.yaml
+web-laravel/npm-debug.log
+web-laravel/yarn-error.log
+
+# --- C# WINDOWS FORMS & VISUAL STUDIO ---
+**/[Bb]in/
+**/[Oo]bj/
+**/.vs/
+**/*.user
+**/*.suo
+**/*.userosscache
+**/*.sln.docstates
+desktop-csharp/packages/
+desktop-csharp/*.nupkg
+
+# --- SISTEM OPERASI & IDE UMUM ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.idea/
+.vscode/
+*.swp
+*.lock

@@ -65,8 +65,8 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', petugas::class),
-        ],
+            'model' => App\Models\Petugas::class,
+    ],
 
         // 'users' => [
         //     'driver' => 'database',

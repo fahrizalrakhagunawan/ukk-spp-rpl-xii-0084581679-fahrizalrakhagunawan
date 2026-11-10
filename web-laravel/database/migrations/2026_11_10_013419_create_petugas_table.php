@@ -15,6 +15,8 @@ return new class extends Migration
             $table->integer('id_petugas')->primary();
             $table->string('username',30)->nullable();
             $table->string('password',255)->nullable();
+            $table->string('nama_petugas',50)->nullable();
+            $table->enum('level',['admin','petugas'])->nullable();
             $table->timestamps();
         });
     }

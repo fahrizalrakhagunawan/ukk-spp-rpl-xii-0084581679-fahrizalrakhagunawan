@@ -1,6 +1,6 @@
 ﻿namespace desktop_c_
 {
-    partial class Form1
+    partial class FormRegisterPetugas
     {
         /// <summary>
         /// Required designer variable.

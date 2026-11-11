@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using desktop_c_.Views;
 
 namespace desktop_c_
 {
@@ -16,7 +17,7 @@ namespace desktop_c_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormRegisterPetugas());
+            Application.Run(new FormLogin());
         }
     }
 }

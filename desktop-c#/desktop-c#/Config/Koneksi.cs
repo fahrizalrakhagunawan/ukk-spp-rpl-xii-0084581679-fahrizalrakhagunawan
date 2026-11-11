@@ -10,19 +10,21 @@ namespace desktop_c_.Config
 {
     internal class Koneksi
     {
-        string konfigurasi = "server=localhost;username=root;port=3306;database=db_spp_sekolah_xii;password=;";
+        public static string sql = "server=localhost;username=root;port=3306;database=db_spp_sekolah_xii;password=;";
 
-        public void GetConnection()
+        public static MySqlConnection GetConnection()
         {
-            MySqlConnection koneksi = new MySqlConnection(konfigurasi);
-            try {
-                koneksi.Open();
-
-            }catch(Exception) 
+            try
             {
-                MessageBox.Show("");
+                MySqlConnection conn = new MySqlConnection(sql);
+                conn.Open();
+                return conn;
             }
-            return;
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Koneksi MySQL Gagal: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
     }
 }

@@ -35,6 +35,7 @@
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonBatal = new System.Windows.Forms.Button();
             this.linkLabelRegister = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxUsername
@@ -79,6 +80,7 @@
             this.buttonLogin.TabIndex = 4;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click_1);
             // 
             // buttonBatal
             // 
@@ -88,22 +90,35 @@
             this.buttonBatal.TabIndex = 5;
             this.buttonBatal.Text = "Batal";
             this.buttonBatal.UseVisualStyleBackColor = true;
+            this.buttonBatal.Click += new System.EventHandler(this.buttonBatal_Click);
             // 
             // linkLabelRegister
             // 
             this.linkLabelRegister.AutoSize = true;
-            this.linkLabelRegister.Location = new System.Drawing.Point(357, 322);
+            this.linkLabelRegister.Location = new System.Drawing.Point(366, 312);
             this.linkLabelRegister.Name = "linkLabelRegister";
-            this.linkLabelRegister.Size = new System.Drawing.Size(55, 13);
+            this.linkLabelRegister.Size = new System.Drawing.Size(46, 13);
             this.linkLabelRegister.TabIndex = 6;
             this.linkLabelRegister.TabStop = true;
-            this.linkLabelRegister.Text = "linkLabel1";
+            this.linkLabelRegister.Text = "Register";
+            this.linkLabelRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegister_LinkClicked);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(355, 40);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 25);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Login";
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.linkLabelRegister);
             this.Controls.Add(this.buttonBatal);
             this.Controls.Add(this.buttonLogin);
@@ -127,5 +142,6 @@
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonBatal;
         private System.Windows.Forms.LinkLabel linkLabelRegister;
+        private System.Windows.Forms.Label label3;
     }
 }

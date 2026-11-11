@@ -6,23 +6,32 @@ using System.Threading.Tasks;
 
 namespace desktop_c_.Models
 {
-    internal class SessionUser
+    public static class SessionUser
     {
-        public SessionUser(int idPetugas, string username, string namaPetugas, string level, bool isLoggedIn)
+        public static int IdPetugas { get; set; }
+        public static string Username { get; set; }
+        public static string NamaPetugas { get; set; }
+        public static string Level { get; set; }
+        public static bool IsLoggedIn { get;  set; }
+
+        public static void SetSession(int id, string user, string nama, string level)
         {
-            IdPetugas = idPetugas;
-            Username = username;
-            NamaPetugas = namaPetugas;
+            IdPetugas = id;
+            Username = user;
+            NamaPetugas = nama;
             Level = level;
-            IsLoggedIn = isLoggedIn;
+            IsLoggedIn = true;
         }
 
-        public int IdPetugas { get; set; }
-        public string Username { get; set; }
-        public string NamaPetugas { get; set; }
-        public string Level { get; set; }
-        public bool IsLoggedIn { get; set; }
+        public static void ClearSession()
+        {
+            IdPetugas = 0;
+            Username = "";
+            NamaPetugas = "";
+            Level = "";
+            IsLoggedIn = false;
+        }
 
-        public void ClearSession() { }
+        public static bool IsAdmin() => Level == "admin";
     }
 }
